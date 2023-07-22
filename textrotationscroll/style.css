@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    position: relative;
+    background-color: #ffff;
+    min-height: 500vh;
+    background:linear-gradient(#62aeff,#9720ff);
+}
+.container{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    perspective: 100px;
+    /* background-color: red; */
+}
+
+h1{
+    color: #fff;
+    font-size: 3em;
+}
+h1.rotate{
+    animation:  animate 20s infinite linear;
+}
+@keyframes animate 
+{
+    0%{
+        transform: rotateY(0deg); 
+        
+    }
+    100%{
+        transform: rotateY(360deg); 
+    }
+}
+

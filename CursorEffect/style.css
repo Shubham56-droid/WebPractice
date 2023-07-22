@@ -1,0 +1,49 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    cursor: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+ul{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+ul li{
+    list-style: none;
+}
+ul li a{
+    position: relative;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 2em;
+    margin: 10px 0px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #000;
+}
+.cursor{
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%,-50%);
+    transition: 0.2s ease-out;
+    mix-blend-mode: difference;
+}
+ul li:hover ~ .cursor{
+    transform: translate(-50%,-50%) scale(4);
+    background-color: #000;
+    box-shadow: 0 0 0 100vh #fff;
+}
